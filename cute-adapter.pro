@@ -9,24 +9,32 @@ CONFIG += staticlib
 QT -= gui
 
 target.path = /usr/local/lib/
-INSTALLS += target
 
-header.files = \
+baseHeader.files = \
     $$TARGET/Time.h \
     $$TARGET/TimerFactory.h \
     $$TARGET/Timer.h \
 
-header.path = /usr/local/include/$$TARGET/
+baseHeader.path = /usr/local/include/$$TARGET/
 
-INSTALLS += header
+linuxHeader.files = \
+    $$TARGET/linux/SignalHandler.h \
+
+linuxHeader.path = /usr/local/include/$$TARGET/linux/
 
 HEADERS = \
-    $$header.files \
+    $$baseHeader.files \
+    $$linuxHeader.files \
 
 SOURCES = \
     $$TARGET/Time.cpp \
     $$TARGET/TimerFactory.cpp \
     $$TARGET/Timer.cpp \
+    $$TARGET/linux/SignalHandler.cpp \
 
+INSTALLS += \
+    target \
+    baseHeader \
+    linuxHeader
 
 include(common.pri)
