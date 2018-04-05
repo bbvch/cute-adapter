@@ -8,7 +8,7 @@ CONFIG += staticlib
 
 QT -= gui
 
-target.path = /usr/local/lib/
+target.path = /usr/lib/
 INSTALLS += target
 
 header.files = \
@@ -19,7 +19,7 @@ header.files = \
     $$TARGET/TimerFactory.mock.h \
     $$TARGET/Timer.mock.h \
 
-header.path = /usr/local/include/$$TARGET/
+header.path = /usr/include/$$TARGET/
 
 INSTALLS += header
 
