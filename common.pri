@@ -12,3 +12,7 @@ CONFIG += object_parallel_to_source
 CONFIG += c++11
 
 QMAKE_CXXFLAGS += -Wall -Wextra -pedantic
+
+isEmpty(PREFIX) {
+    PREFIX = /usr/
+}

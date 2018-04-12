@@ -3,12 +3,14 @@
 #
 # SPDX-License-Identifier:	Apache-2.0
 
+include(common.pri)
+
 TEMPLATE = lib
 CONFIG += staticlib
 
 QT -= gui
 
-target.path = /usr/lib/
+target.path = $$PREFIX/lib/
 INSTALLS += target
 
 header.files = \
@@ -19,7 +21,7 @@ header.files = \
     $$TARGET/TimerFactory.mock.h \
     $$TARGET/Timer.mock.h \
 
-header.path = /usr/include/$$TARGET/
+header.path = $$PREFIX/include/$$TARGET/
 
 INSTALLS += header
 
@@ -33,5 +35,3 @@ HEADERS += \
     $$header.files \
 
 LIBS += -lcute-adapter
-
-include(common.pri)

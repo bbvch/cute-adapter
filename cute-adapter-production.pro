@@ -3,24 +3,26 @@
 #
 # SPDX-License-Identifier:	Apache-2.0
 
+include(common.pri)
+
 TEMPLATE = lib
 CONFIG += staticlib
 
 QT -= gui
 
-target.path = /usr/lib/
+target.path = $$PREFIX/lib/
 
 baseHeader.files = \
     $$TARGET/Time.h \
     $$TARGET/Timer.h \
     $$TARGET/TimerFactory.h \
 
-baseHeader.path = /usr/include/$$TARGET/
+baseHeader.path = $$PREFIX/include/$$TARGET/
 
 linuxHeader.files = \
     $$TARGET/linux/SignalHandler.h \
 
-linuxHeader.path = /usr/include/$$TARGET/linux/
+linuxHeader.path = $$PREFIX/include/$$TARGET/linux/
 
 SOURCES += \
     $$TARGET/Time.cpp \
@@ -36,5 +38,3 @@ INSTALLS += \
     target \
     baseHeader \
     linuxHeader \
-
-include(common.pri)

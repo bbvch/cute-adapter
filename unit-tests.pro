@@ -3,6 +3,8 @@
 #
 # SPDX-License-Identifier:	Apache-2.0
 
+include(common.pri)
+
 TEMPLATE = app
 
 CONFIG += console
@@ -28,5 +30,3 @@ HEADERS += \
     cute-adapter-testing/SignalReceiver.testsupport.h
 
 LIBS += -lgtest -lgmock_main -lgmock
-
-include(common.pri)
