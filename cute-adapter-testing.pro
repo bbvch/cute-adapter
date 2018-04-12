@@ -20,6 +20,7 @@ header.files = \
     $$TARGET/Time.mock.h \
     $$TARGET/TimerFactory.mock.h \
     $$TARGET/Timer.mock.h \
+    $$TARGET/UuidRepository.h \
 
 header.path = $$PREFIX/include/$$TARGET/
 
@@ -30,6 +31,7 @@ SOURCES += \
     $$TARGET/SimulatedTime.cpp \
     $$TARGET/SimulatedTimerFactory.cpp \
     $$TARGET/SimulatedTimer.cpp \
+    $$TARGET/UuidRepository.cpp \
 
 HEADERS += \
     $$header.files \

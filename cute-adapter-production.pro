@@ -16,6 +16,7 @@ baseHeader.files = \
     $$TARGET/Time.h \
     $$TARGET/Timer.h \
     $$TARGET/TimerFactory.h \
+    $$TARGET/UuidGenerator.h \
 
 baseHeader.path = $$PREFIX/include/$$TARGET/
 
@@ -28,6 +29,7 @@ SOURCES += \
     $$TARGET/Time.cpp \
     $$TARGET/Timer.cpp \
     $$TARGET/TimerFactory.cpp \
+    $$TARGET/UuidGenerator.cpp \
     $$TARGET/linux/SignalHandler.cpp \
 
 HEADERS += \
