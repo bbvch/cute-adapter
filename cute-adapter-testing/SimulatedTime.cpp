@@ -21,7 +21,17 @@ SimulatedTime::SimulatedTime(const SimulatedTimerFactory &factory) :
 
 QDateTime SimulatedTime::now() const
 {
-  return QDateTime::fromMSecsSinceEpoch(_factory.time_msec(), Qt::TimeSpec::UTC);
+  return QDateTime::fromMSecsSinceEpoch(_factory.time_msec(), timeSpec, offsetSeconds);
+}
+
+void SimulatedTime::setTimeSpec(Qt::TimeSpec spec)
+{
+  timeSpec = spec;
+}
+
+void SimulatedTime::setOffsetFromUtc(int offsetSeconds)
+{
+  this->offsetSeconds = offsetSeconds;
 }
 
 

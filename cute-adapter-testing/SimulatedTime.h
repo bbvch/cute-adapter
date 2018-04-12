@@ -23,8 +23,14 @@ public:
 
   QDateTime now() const override;
 
+  void setTimeSpec(Qt::TimeSpec spec);
+  void setOffsetFromUtc(int offsetSeconds);
+
 private:
   const SimulatedTimerFactory &_factory;
+  Qt::TimeSpec timeSpec{Qt::TimeSpec::UTC};
+  int offsetSeconds{0};
+
 };
 
 
