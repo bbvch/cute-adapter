@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier:	Apache-2.0
 
-include(common.pri)
+include(../common.pri)
 
 TEMPLATE = lib
 CONFIG += staticlib
@@ -39,4 +39,8 @@ SOURCES = \
 INSTALLS += \
     target \
     baseHeader \
-    linuxHeader
+    linuxHeader \
+
+OTHER_FILES += \
+    rpm/cute-adapter.yaml \
+    rpm/Readme \

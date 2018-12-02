@@ -3,12 +3,14 @@
 #
 # SPDX-License-Identifier:	Apache-2.0
 
-include(common.pri)
+include(../common.pri)
 
 TEMPLATE = lib
 CONFIG += staticlib
 
 QT -= gui
+
+INCLUDEPATH += ../cute-adapter/
 
 target.path = $$PREFIX/lib/
 INSTALLS += target
