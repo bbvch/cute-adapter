@@ -39,4 +39,8 @@ SOURCES = \
 INSTALLS += \
     target \
     baseHeader \
-    linuxHeader
+    linuxHeader \
+
+OTHER_FILES += \
+    rpm/cute-adapter.yaml \
+    rpm/Readme \

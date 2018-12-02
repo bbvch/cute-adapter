@@ -1,0 +1,20 @@
+Name: cute-adapter
+Summary: Qt adapters base
+Version: 0
+Group: Libraries
+License: Apache-2.0
+# This must be generated before uploading a package to a remote build service
+Sources:
+- '%{name}-%{version}.tar.bz2'
+Description: |
+  Qt adapters for testing
+Configure: none
+# The qtc5 builder inserts macros to allow QtCreator to have fine
+# control over qmake/make execution
+Builder: qtc5
+PkgConfigBR:
+  - Qt5Core
+
+Files:
+  - '%{_libdir}'
+  - '%{_includedir}'

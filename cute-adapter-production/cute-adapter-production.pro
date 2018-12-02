@@ -42,3 +42,7 @@ INSTALLS += \
     target \
     baseHeader \
     linuxHeader \
+
+
+OTHER_FILES += \
+    rpm/cute-adapter-production.yaml \
