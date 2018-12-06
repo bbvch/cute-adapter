@@ -42,11 +42,22 @@ INSTALLS += header_gtest
 HEADERS += $$header_gtest.files
 
 
+header_cucumber.files = \
+    $$TARGET/cucumber/parser.h \
+
+header_cucumber.path = $$PREFIX/include/$$TARGET/cucumber/
+
+INSTALLS += header_cucumber
+
+HEADERS += $$header_cucumber.files
+
+
 SOURCES += \
     $$TARGET/SimulatedTime.cpp \
     $$TARGET/SimulatedTimerFactory.cpp \
     $$TARGET/SimulatedTimer.cpp \
     $$TARGET/UuidRepository.cpp \
     $$TARGET/gtest/PrintTo.cpp \
+    $$TARGET/cucumber/parser.cpp \
 
 LIBS += -lcute-adapter

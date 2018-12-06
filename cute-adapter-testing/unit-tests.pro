@@ -29,6 +29,8 @@ SOURCES += \
     $$CUTE_ADAPTER_DIR/cute-adapter/TimerFactory.cpp \
     cute-adapter-testing/gtest/PrintTo.cpp \
     cute-adapter-testing/gtest/PrintTo.test.cpp \
+    cute-adapter-testing/cucumber/parser.cpp \
+    cute-adapter-testing/cucumber/parser.test.cpp \
 
 HEADERS += \
     cute-adapter-testing/SimulatedTimerFactory.h \
@@ -41,5 +43,6 @@ HEADERS += \
     $$CUTE_ADAPTER_DIR/cute-adapter/Time.h \
     $$CUTE_ADAPTER_DIR/cute-adapter/TimerFactory.h \
     cute-adapter-testing/gtest/PrintTo.h \
+    cute-adapter-testing/cucumber/parser.h \
 
 LIBS += -lgtest -lgmock_main -lgmock
