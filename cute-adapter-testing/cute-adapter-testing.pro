@@ -32,10 +32,21 @@ INSTALLS += header
 HEADERS += $$header.files
 
 
+header_gtest.files = \
+    $$TARGET/gtest/PrintTo.h \
+
+header_gtest.path = $$PREFIX/include/$$TARGET/gtest/
+
+INSTALLS += header_gtest
+
+HEADERS += $$header_gtest.files
+
+
 SOURCES += \
     $$TARGET/SimulatedTime.cpp \
     $$TARGET/SimulatedTimerFactory.cpp \
     $$TARGET/SimulatedTimer.cpp \
     $$TARGET/UuidRepository.cpp \
+    $$TARGET/gtest/PrintTo.cpp \
 
 LIBS += -lcute-adapter
