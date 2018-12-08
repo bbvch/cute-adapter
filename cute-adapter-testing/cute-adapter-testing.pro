@@ -15,6 +15,7 @@ INCLUDEPATH += ../cute-adapter/
 target.path = $$PREFIX/lib/
 INSTALLS += target
 
+
 header.files = \
     $$TARGET/SimulatedTime.h \
     $$TARGET/SimulatedTimerFactory.h \
@@ -28,14 +29,13 @@ header.path = $$PREFIX/include/$$TARGET/
 
 INSTALLS += header
 
+HEADERS += $$header.files
+
 
 SOURCES += \
     $$TARGET/SimulatedTime.cpp \
     $$TARGET/SimulatedTimerFactory.cpp \
     $$TARGET/SimulatedTimer.cpp \
     $$TARGET/UuidRepository.cpp \
-
-HEADERS += \
-    $$header.files \
 
 LIBS += -lcute-adapter
