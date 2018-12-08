@@ -2,4 +2,4 @@ TEMPLATE = subdirs
 
 SUBDIRS += \
     cute-adapter-testing.pro \
-    unit-tests.pro \
+    cute-adapter-testing-unit-tests.pro \

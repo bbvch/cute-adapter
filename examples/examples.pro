@@ -1,5 +1,5 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-    hello-world/unittest.pro \
+    hello-world/HelloWorld-unit-tests.pro \
     hello-world/HelloWorld.pro \
