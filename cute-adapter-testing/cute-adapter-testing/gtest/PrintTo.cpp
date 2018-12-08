@@ -7,15 +7,15 @@
 
 #include "PrintTo.h"
 
-#include <sstream>
+#include "cute-adapter-testing/std/stream.h"
 
 
 void PrintTo(const QString& value, std::ostream* stream)
 {
-  *stream << "\"" << value.toStdString() << "\"";
+  *stream << value;
 }
 
 void PrintTo(const QDateTime& value, std::ostream* stream)
 {
-  *stream << value.toString(Qt::ISODate).toStdString();
+  *stream << value;
 }

@@ -52,6 +52,16 @@ INSTALLS += header_cucumber
 HEADERS += $$header_cucumber.files
 
 
+header_std.files = \
+    $$TARGET/std/stream.h \
+
+header_std.path = $$PREFIX/include/$$TARGET/std/
+
+INSTALLS += header_std
+
+HEADERS += $$header_std.files
+
+
 SOURCES += \
     $$TARGET/SimulatedTime.cpp \
     $$TARGET/SimulatedTimerFactory.cpp \
@@ -59,5 +69,6 @@ SOURCES += \
     $$TARGET/UuidRepository.cpp \
     $$TARGET/gtest/PrintTo.cpp \
     $$TARGET/cucumber/parser.cpp \
+    $$TARGET/std/stream.cpp \
 
 LIBS += -lcute-adapter
