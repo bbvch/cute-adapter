@@ -19,3 +19,8 @@ void PrintTo(const QDateTime& value, std::ostream* stream)
 {
   *stream << value;
 }
+
+void PrintTo(const QVariant& value, std::ostream* stream)
+{
+  *stream << value;
+}

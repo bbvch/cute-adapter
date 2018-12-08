@@ -10,7 +10,9 @@
 #include <ostream>
 #include <QString>
 #include <QDateTime>
+#include <QVariant>
 
 
 void PrintTo(const QString&, std::ostream*);
 void PrintTo(const QDateTime&, std::ostream*);
+void PrintTo(const QVariant&, std::ostream*);

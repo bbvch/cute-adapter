@@ -10,7 +10,9 @@
 #include <ostream>
 #include <QString>
 #include <QDateTime>
+#include <QVariant>
 
 
 std::ostream& operator<<(std::ostream&, const QString&);
 std::ostream& operator<<(std::ostream&, const QDateTime&);
+std::ostream& operator<<(std::ostream&, const QVariant&);

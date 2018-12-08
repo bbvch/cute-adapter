@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
 #include <QSignalSpy>
 #include <cute-adapter-testing/SimulatedTimerFactory.h>
+#include <cute-adapter-testing/gtest/PrintTo.h>
 #include "HelloWorld.h"
 
 class HelloWorld_test
