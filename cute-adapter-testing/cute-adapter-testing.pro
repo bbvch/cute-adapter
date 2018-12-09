@@ -15,6 +15,7 @@ INCLUDEPATH += ../cute-adapter/
 target.path = $$PREFIX/lib/
 INSTALLS += target
 
+
 header.files = \
     $$TARGET/SimulatedTime.h \
     $$TARGET/SimulatedTimerFactory.h \
@@ -28,14 +29,46 @@ header.path = $$PREFIX/include/$$TARGET/
 
 INSTALLS += header
 
+HEADERS += $$header.files
+
+
+header_gtest.files = \
+    $$TARGET/gtest/PrintTo.h \
+
+header_gtest.path = $$PREFIX/include/$$TARGET/gtest/
+
+INSTALLS += header_gtest
+
+HEADERS += $$header_gtest.files
+
+
+header_cucumber.files = \
+    $$TARGET/cucumber/parser.h \
+
+header_cucumber.path = $$PREFIX/include/$$TARGET/cucumber/
+
+INSTALLS += header_cucumber
+
+HEADERS += $$header_cucumber.files
+
+
+header_std.files = \
+    $$TARGET/std/stream.h \
+
+header_std.path = $$PREFIX/include/$$TARGET/std/
+
+INSTALLS += header_std
+
+HEADERS += $$header_std.files
+
 
 SOURCES += \
     $$TARGET/SimulatedTime.cpp \
     $$TARGET/SimulatedTimerFactory.cpp \
     $$TARGET/SimulatedTimer.cpp \
     $$TARGET/UuidRepository.cpp \
-
-HEADERS += \
-    $$header.files \
+    $$TARGET/gtest/PrintTo.cpp \
+    $$TARGET/cucumber/parser.cpp \
+    $$TARGET/std/stream.cpp \
 
 LIBS += -lcute-adapter
